@@ -66,3 +66,116 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	gap: 0 40px;
+	margin: 20px auto;
+	max-width: 1200px;
+}
+
+p {
+	margin-top: 0;
+}
+
+p,
+header,
+h2,
+footer {
+	grid-column: 2 / span 1;
+}
+
+header p {
+	margin: 0;
+}
+.tip-vlevo {
+	grid-column: 1 / span 1;
+	border-right: 3px solid var(--zluta);
+	text-align: right;
+	padding: 20px;
+	height:fit-content;
+}
+
+.tip-vlevo p,
+.tip-vpravo p {
+	margin: 0;
+}
+
+.tip-vpravo {
+	grid-column: 3/span 1;
+	border-left: 3px solid var(--zluta);
+	padding: 20px;
+	height:fit-content;
+}
+
+.tip-vlevo a,
+.tip-vpravo a {
+	color: var(--oranzova);
+}
+
+blockquote,
+figure {
+	grid-column: 1 / span 3;
+	width: 100%;
+	margin: 25px 0;
+}
+
+h1 {
+	color: var(--zelena);
+	font-size: 80px;
+	margin-bottom: 50px;
+}
+
+h2 {
+	color: var(--zelena);
+	font-size: 50px;
+	margin: 35px 0 20px 0;
+}
+
+.meta {
+	color: var(--seda);
+}
+
+.tip-vlevo,
+.tip-vpravo {
+	background-color: var(--svetla);
+	color: var(--tmava);
+}
+
+figcaption {
+	color: var(--seda);
+}
+
+blockquote {
+	font-size: 40px;
+	color: var(--seda);
+	text-align: center;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "";
+	width: 120px;
+	height: 2px;
+	background-color: var(--zelena);
+	display: block;
+	text-align: center;
+	margin: 20px auto;
+}
+
+figure img {
+	width: 100%;
+
+}
+
+.tip-vlevo img {
+	width: 100%;
+}
+
+footer {
+	color: var(--seda);
+}
+
+footer a {
+	color: var(--seda);
+}
